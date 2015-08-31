@@ -1,0 +1,22 @@
+proxy:
+    build: ./proxy
+    links:
+        - web1:web1
+        - web2:web2
+        - web3:web3
+    ports:
+        - "80:80"
+web1:
+    build: ./web
+    links:
+        - redis
+web2:
+    build: ./web
+    links:
+        - redis
+web3:
+    build: ./web
+    links:
+        - redis
+redis:
+    image: redis
