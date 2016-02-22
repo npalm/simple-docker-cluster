@@ -1,4 +1,4 @@
-FROM        ubuntu
+FROM        ubuntu:14.04
 MAINTAINER Niek Palm
 
 # Update the repository and install Redis Server
